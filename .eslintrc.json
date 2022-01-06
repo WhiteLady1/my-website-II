@@ -23,6 +23,10 @@
         "no-trailing-spaces": ["error"],
         "import/prefer-default-export": 0,
         "no-extra-semi": 0,
-        "@typescript-eslint/no-extra-semi": 0  
+        "@typescript-eslint/no-extra-semi": 0,
+        "import/no-unresolved": [
+            2, 
+            { "caseSensitive": false }
+         ]  
     }
 }
