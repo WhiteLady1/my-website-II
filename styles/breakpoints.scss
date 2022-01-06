@@ -1,0 +1,23 @@
+// (default) phones => 0 - 575px
+$breakpoint-tablet-min: 576px;           // tablets => 576px - 991px
+$breakpoint-desktop-min: 992px;          // small desktops => 992px - 1199px
+$breakpoint-large-desktop-min: 1200px;   // big desktops => 1200 and more
+                                        
+
+@mixin xlg {
+  @media (min-width: #{$breakpoint-large-desktop-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$breakpoint-desktop-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$breakpoint-tablet-min}) {
+    @content;
+  }
+}

@@ -1,0 +1,114 @@
+@import '../../styles/color.scss';
+@import '../../styles/breakpoints.scss';
+
+.navigation {
+  height: 76px;
+  color: $color-text-secondary;
+  background-color: $color-primary;
+  
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: 17px 20px;
+
+    @include xlg {
+      padding: 23px 40px;
+    }
+
+    &__text {
+      &:hover {
+        font-size: 18px;
+        transition: font-size ease-out .3s;
+      }
+    }
+
+    &__hamburger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: background-color ease-in-out .5s;
+
+      &:before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-image: url('./img/menu1.svg');
+      }
+      
+      &--is-open {
+        transition: background-color ease-in-out .5s;
+
+        &:before {
+          background-image: url('./img/menu0.svg');
+        }
+      }
+      
+      @include xlg {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $color-primary;
+    transform: translate(0, -150%);
+    transition: transform ease-in-out .5s;
+    
+    @include xlg {
+      display: flex;
+      transform: translate(0, 0);
+    }
+
+    &--is-open {
+      position: relative;
+      z-index: 2;
+      transform: translate(0, 0);
+    }
+
+    &__item {
+      padding-top: 17px;
+      padding-bottom: 17px;
+
+      @include xlg {
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      &__link {
+        margin: 20px;
+        padding-bottom: 14px;
+        text-decoration: none;
+
+        &:hover:not(&--active) {
+          box-shadow: inset 0px -3px 0px #86BC25;
+          transition: box-shadow ease-in-out .2s;
+        }
+
+        @include xlg {
+          margin: 0 20px;
+          padding: 25px 0;
+        }
+        
+        &--active {
+          box-shadow: inset 0px -3px 0px #86BC25;
+        
+          @include xlg {
+            box-shadow: inset 0px -3px 0px #86BC25;
+          }
+        }
+      }
+    }
+  }
+}
