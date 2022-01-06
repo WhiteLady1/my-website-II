@@ -1,7 +1,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
-import { Navigation } from '../../components';
+import { Introduction, Navigation } from '../../components';
 
 export const HomepageLayut = () => {
   console.log('Nevigation layout');
@@ -27,6 +27,12 @@ export const HomepageLayut = () => {
             name: 'Kontakt',
           },
         ]}
+      />
+      <Introduction
+        // picture={picture}
+        name="Blanka Semanová"
+        position="Frontend Developer"
+        text="Krátké shrnutí toho kdo jsem, kde jsem se tu vzala a kam směřuju"
       />
       <div>
         <ul>
