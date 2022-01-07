@@ -1,0 +1,18 @@
+@import "../../styles/breakpoints.scss";
+
+.skill {
+  margin: 10px 15px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 41px -19px rgba(166,163,166,0.9);
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+
+  @include lg {
+    flex-direction: row;
+  }
+}
