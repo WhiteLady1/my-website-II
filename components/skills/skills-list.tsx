@@ -15,7 +15,7 @@ interface SkillsListProps {
 export const SkillsList:React.FC<SkillsListProps> = ({
   skills,
 }) => (
-  <div className="skills-list">
+  <div className="skills-list" id="skills">
     {skills.map((skill, index) => <Skill
       key= {index}
       name={skill.skillName}

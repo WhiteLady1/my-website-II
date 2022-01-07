@@ -3,7 +3,7 @@ import Image from 'next/image';
 import PhotoContact from './img/photo-contact.jpg';
 
 export const Contakct = () => (
-  <div className="contact">
+  <div className="contact" id="contact">
     <div className="contact__photo">
       <Image src={PhotoContact} alt="LinkedIn" layout="fill" objectFit="cover" />
     </div>

@@ -1,9 +1,12 @@
 /* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 import React from 'react';
-import { Introduction, Navigation } from '../../components';
-import { Contakct } from '../../components/contact';
-import { SkillsList } from '../../components/skills';
+import {
+  Introduction,
+  Navigation,
+  Contakct,
+  SkillsList,
+  ProjectList,
+} from '../../components';
 
 export const HomepageLayut = () => {
   console.log('Nevigation layout');
@@ -49,6 +52,22 @@ export const HomepageLayut = () => {
           {
             skillName: 'EsLint',
             skillDescription: 'V projektech používám systélu EsLint, kde si nastavuji vlastní pravidla',
+          },
+        ]}
+      />
+      <ProjectList
+        projectList={[
+          {
+            name: 'BeeScale',
+            description: 'Aplikace po včelý váhy',
+          },
+          {
+            name: 'Piškvorky',
+            description: 'Malá aplikace pro hraní zábavné hry',
+          },
+          {
+            name: 'Vizitka',
+            description: 'Aneb jak vznikala tato skránka',
           },
         ]}
       />
